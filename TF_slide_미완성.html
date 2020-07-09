@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Transformslide</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Huge Inc Website">
+    <meta name="keywords" content="Design, Agency, Web, UI, UX">
+    <meta name="author" content="Hevin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<script>
+
+  var slide_x = 0;
+  function move_left() {
+      document.getElementById("s_content").
+      style="transform:translate(-33.3333%,0)";
+  }
+
+  var slide_x = 0;
+  function move_right() {
+      document.getElementById("s_content").
+      style="transform:translate(33.3333%,0)";
+  }
+
+</script>
+
+<!-- 아이콘 fontawesome -->
+<script src="https://kit.fontawesome.com/3867def65b.js" crossorigin="anonymous"></script>
+
+
+<!-- css -->
+ <style>
+    .slide_container {width: 300px; height: 200px; margin: 100px auto; background-color: black; box-sizing: border-box; padding: 0; border: 0; position: relative;}
+    .slide_content {width: 300%; height: 100%; background-color: salmon; display: flex; padding: 0; margin: 0; position: absolute; top: 0; left: 0;}
+    button {width: 60px; height: 60px; border-radius: 50%; border: 1px solid gray; }
+    li {width: 100%; height: 100%;}
+
+
+    .box_h1:before {content: 'Hi';}
+    .fa-globe {color: aqua;}
+
+
+    
+ </style>
+
+</head>
+
+
+<body>
+
+    <form>
+        <div class="box">
+             <h1 class="box_h1">Hello</h1>
+        </div>
+        <i class="fas fa-globe"></i>
+        <select style="width: 100px; height: 40px;">
+             <option>한국어</option>
+             <option>English</option>
+        </select>
+    </form>
+
+
+    
+  <div class="slide_container">
+    <ul id="s_content" class="slide_content">
+        <li>Img1</li>
+        <li>Img2</li>
+        <li>Img3</li>
+    </ul>
+  </div>
+
+  <button class="slide_move_left" onclick="move_left()"><</button>
+  <button class="slide_move_right" onclick="move_right()">></button>
+
+</body> 
+
+
+
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>JS-random</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="눈만들기">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+ <style>
+   body {background-color: black;}
+    .snow {width: 10px; height: 10px; background-color:white; border-radius: 5px; position: absolute; top: 0; left: 0;}
+   ceil {width: 100px; height: 100px; background-color: aquamarine; position: absolute; top: 0; left: 0;}
+ 
+ </style>
+
+</head>
+
+<body>
+
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  <p id="random" class="snow"></p>
+  //<p id="ceil"></p>
+
+  <script>   
+    //function move() {     
+       //var a = Math.random()*1000;
+        //document.getElementById("random").innerHTML = a;
+        //document.getElementById("ceil").innerHTML = Math.ceil(a); 
+        //document.getElementById("ceil").style.top = Math.ceil(a / 2) + "px"; 
+        //document.getElementById("ceil").style.left = Math.ceil(a) + "px"; 
+        //document.getElementById("floor").innerHTML = Math.floor(a);   
+    //}
+        //setInterval(move, 1000);       
+ 
+    function getRndInteger(min,max) {     //최대값, 최소값을 포함하는 난수 발생 함수
+      return Math.floor(Math.random()*(max - min + 1) + min);
+    }    
+    
+    function snow() {
+      for (i=0; i<11; i++) {
+        document.getElementsByClassName("snow")[i].style.width = getRndInteger(1,20) + "px";
+        document.getElementsByClassName("snow")[i].style.top = getRndInteger(1,980) + "px";
+        document.getElementsByClassName("snow")[i].style.left = getRndInteger(1,1900) + "px";
+      }
+    }
+
+    setInterval(snow, 1000); 
+
+  </script>
+
+
+</body> 
+
+
+
+</html>

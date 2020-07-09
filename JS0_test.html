@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>JS-test</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="반복문">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+ <style>
+ 
+ </style>
+
+</head>
+
+<body>
+
+  <!--<p id="demo"></p>
+  <script>
+     var car="";
+    document.getElementById("demo").innerHTML = 
+    "The value is" + car + "<br>" + "The type is:" + typeof car; 
+  </script>-->
+
+  <!--<p id="demo"></p>
+  <script>
+    var cars = ["BMW","KIA","HD","SAAB","VOLVO","AUDI"]; //cars 배열 변수 선언
+    var carsObj = {brand:"현대",name:"소나타",price:"3000만원",color:"화이트"};
+    var mycar = "MYCAR"
+    var txt = "My car <br>",len;
+    len = cars.length;
+    /*for (i=0; i<6; i++) {
+       txt = txt + cars[i] + " ";
+       document.getElementById("demo").innerHTML = txt;
+    }*/
+    /*
+    var x;
+    for (x in carsObj) {       // for-in
+       txt = txt + carsObj[x] + "<br>";
+       document.getElementById("demo").innerHTML = txt;
+    }*/
+    /*
+    var x;
+    for (x of mycar) {        // for-of 문자열 반환
+       txt = txt + x + "<br>";
+       document.getElementById("demo").innerHTML = txt;
+    }*/
+    var i=0;
+    while (i<len) {
+       txt = txt + cars[i] + " ";
+       document.getElementById("demo").innerHTML = txt;
+       i = i+1;
+    }   
+  </script>-->
+
+ 
+  <!-- setTime 
+  <h1 id="demo"></h1>
+  <script>  
+    var a = 0;
+    function plusNum() {
+      a = a + 5;
+      document.getElementById("demo").innerHTML = a;
+
+      setTimeout ( plusNum, 3000 );    
+    }
+    plusNum();
+
+  </script>-->
+
+  <!-- setInterval 
+  <h1 id="demo"></h1>
+  <script>  
+    var a = 0;
+    function plusNum() {     
+      a = a + 5;
+      document.getElementById("demo").innerHTML = a;    
+    }
+    setInterval ( plusNum, 3000 );
+       
+  </script>-->
+
+
+ <!-- operator 할당연산자
+  <h1 id="demo"></h1>
+  <script>  
+    var x = 10;
+    var y = 15;
+    var z = 20;
+    var a = 10;
+    var b = 10;
+    var C = 10;
+    var d = 10;
+    //x += 5; //x = x + 5; 더하기
+    x -= 5; //x = x - 5; 빼기
+    y *= 5; //y = y * 5;곱하기
+    z /= 6; //z = z * 6;나누기
+    a %= 4; //x = x * 4;나머지
+    b **= 3; //x = x * 3;제곱
+    c ++; //c = c + 1; 더하기1
+    d --; //d = d - 1; 빼기1
+
+    document.getElementById("demo").innerHTML = "/x : "+ x + "/y : "+ y + "/z : "+ z + "/a : "+ a + "/b : "+ b;
+        
+  </script> 
+
+  <p id="demo"></p>
+  <script>
+    var d = 3;
+    function plus(a,b) {   
+      d = d*2  
+      return  a + b + d;
+    };    
+    var c = plus(3,4);
+    
+    document.getElementById("demo").innerHTML = d;    
+    
+  </script>-->
+
+
+<!-- 수학 객체 -->
+<p id="pi1"></p>
+<p id="pi2"></p>
+<p id="round"></p>
+<p id="pow"></p>
+<p id="ceil"></p>
+<p id="floor"></p>
+<p id="abs"></p>
+<p id="max"></p>
+<p id="min"></p>
+<p id="random"></p>
+<p id="random2"></p>
+
+<script>
+  document.getElementById("pi1").innerHTML = "반지름이 10인 원의 둘레 길이는? " + 2*Math.PI*10; 
+  document.getElementById("pi2").innerHTML = "반지름이 10인 원의 둘레 넓이는? " + Math.PI*10*10; 
+
+  document.getElementById("round").innerHTML = "4.7의 반올림은? " + Math.round(4.7); 
+  document.getElementById("pow").innerHTML = "2의 10승은(거듭제곱)? " + Math.pow(2,10); 
+
+  document.getElementById("ceil").innerHTML = "4.7의 올림은? " + Math.ceil(4.7); 
+  document.getElementById("floor").innerHTML = "4.7의 내림은? " + Math.floor(4.7); 
+
+  document.getElementById("abs").innerHTML = "-4.7의 절대값? " + Math.abs(-4.7); 
+
+  document.getElementById("max").innerHTML = "최대값? " + Math.max(5,6); 
+  document.getElementById("min").innerHTML = "최소값? " + Math.min(6,9); 
+
+  document.getElementById("random").innerHTML = "0=<랜덤값<1? " + Math.random(); 
+
+  function getRndInteger (min,max) {   
+      return Math.floor( Math.random() * (max - min) + min )
+    }
+
+  document.getElementById("random2").innerHTML = "random function? " + getRndInteger (2,100);
+  
+</script>
+
+  
+ 
+
+ 
+</body> 
+
+
+
+</html>

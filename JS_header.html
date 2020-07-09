@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>JS-header</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="헤더로고들어갓다나갓다">
+  <meta name="keywords" content="자바스크립트">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+ <style>
+     #header {width: 100px; height: 100vh; position: fixed; top: 0; left: -150px; transition: all 0.5s; display: flex;}
+     .gnb {width: 50px; height: 100%; background-color: #333333;}
+     .lnb {width: 50px; height: 100%; background-color: #1573D0;}
+
+     section  {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;}
+
+     #buttonOn {width: 50px; height: 50px; border: 1px solid #2997FF; position: fixed; left: 0px; top: 50%;}
+     #buttonOff {width: 50px; height: 50px; border: 1px solid #2997FF; position: fixed; left: 100px; top: 50%; display: none;}
+ </style>
+
+</head>
+
+<body>  
+    <header id="header">
+        <div class="gnb">GNB</div>
+        <div class="lnb">LNB</div>
+    </header> 
+    <section>section 1
+        <button id="buttonOn" onclick="menuOn()">OPEN</button>
+        <button id="buttonOff" onclick="menuOff()">CLOSE</button>
+    </section>
+    <section>section 2</section>
+
+    <!-- <script>      
+        var preYScroll = window.pageYOffset;
+         console.log("preYScroll" + preYScroll);
+
+        window.onscroll = function() {
+           var presentYScroll = window.pageYOffset;
+            console.log(presentYScroll);
+
+           if (presentYScroll > preYScroll && presentYScroll > 300) {
+               document.getElementById("header").style="top:-50px; opacity:0.5;";
+            }         
+           else {
+               document.getElementById("header").style="top:0px; opacity:1;";
+               preYScroll = presentYScroll;
+            }
+        };
+    </script> -->
+
+    <script>      
+        function menuOn() {
+            document.getElementById("header").style="left:0px;";
+            document.getElementById("buttonOn").style="display: none;";
+            document.getElementById("buttonOff").style="display: block;";
+        }
+                     
+        function menuOff() {
+            document.getElementById("header").style="left:-150px;";
+            document.getElementById("buttonOn").style="display: block;";
+            document.getElementById("buttonOff").style="display: none;";
+        }
+        
+    </script>
+
+ 
+
+ 
+</body> 
+
+
+
+</html>

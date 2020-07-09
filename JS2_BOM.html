@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>JS-BOM</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="반복문">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+  <style>
+ 
+ 
+  </style>
+
+</head>
+
+<body>
+
+  <p id="result1"></p>
+  <p id="result2"></p>
+  <p id="result3"></p>
+  <p id="result4"></p>
+  <p id="result5"></p>
+  <p id="result6"></p>
+  <p id="result7"></p>
+
+  <button onclick="popup()">팝업</button>
+
+
+  <script>
+      var windowX = window.innerWidth;    var windowY = window.innerHeight;   //윈도우 내부 높이 너비 = document.body.clientWidth;
+      var windowXx = screen.width;        var windowYy = screen.height;       //헤상도
+      var windowXxx = screen.availWidth;  var windowYyy = screen.availHeight; //
+      var windowColor = screen.colorDepth;  //bit
+    
+      /*document.getElementById("result1").innerHTML = "Window Width is :" + windowX; 
+      document.getElementById("result2").innerHTML = "Window Height is :" + windowY; 
+      document.getElementById("result3").innerHTML = "Screen Width is :" + windowXx; 
+      document.getElementById("result4").innerHTML = "Screen Height is :" + windowYy; 
+      document.getElementById("result5").innerHTML = "Screen availWidth is :" + windowXxx; 
+      document.getElementById("result6").innerHTML = "Screen availHeight is :" + windowYyy; 
+      document.getElementById("result7").innerHTML = "Screen colorDepth is :" + windowColor; */
+
+
+      var windowHref = window.location.href; //파일의 url
+      var windowHost = window.location.hostname; 
+      var windowPath = window.location.pathname; 
+      var windowProto = window.location.protocol; 
+      var windowPort = window.location.port; //안뜸
+      
+
+      /* document.getElementById("result1").innerHTML = "href :" + windowHref; 
+      document.getElementById("result2").innerHTML = "hostname :" + windowHost; 
+      document.getElementById("result3").innerHTML = "pathname :" + windowPath; 
+      document.getElementById("result4").innerHTML = "protocol :" + windowProto; 
+      document.getElementById("result5").innerHTML = "port :" + windowPort; */
+     
+
+      //window.location.assign("https://www.naver.com/");
+      // window.history.forward();
+
+
+      //navigator.appName >> Netscape
+      //navigator.appCodeName >> Mozilla
+      //navigator.product >> Gecko 브라우저 엔진
+      //navigator.appVersion
+      //navigator.userAgent
+      //navigator.platform
+      //navigator.language
+      //navigator.onLine
+      
+     //document.getElementById("result1").innerHTML = navigator.javaEnabled();
+
+
+    function popup() {
+      /*if (window.confirm("코로나19 증상이 있습니까?")) {//true나 false값 반환
+        document.getElementById("result1").innerHTML = "당장 질병본부 연락 바람";
+        }
+        else {
+          document.getElementById("result1").innerHTML = "위생관리 철저 당부";
+        }*/
+
+      var name = window.prompt("당신의 이름을\n입력해주세요","혜빈");
+       
+      if (name == null || name == " ") {
+        document.getElementById("result1").innerHTML = "취소되었습니다";
+      }
+      else  {
+        document.getElementById("result1").innerHTML = name;
+      }
+    }
+
+    
+
+  </script>
+
+
+
+
+ 
+</body> 
+
+
+
+</html>

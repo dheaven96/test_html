@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>JS-datetime</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="날짜시간객체">
+  <meta name="keywords" content="날짜시간메소드 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+ <style>
+ 
+ </style>
+
+</head>
+
+<body>
+
+  <!-- 날짜 시간 메소드
+  <h1 id="demo">good evening!</h1>
+  
+  <script>  
+    var presentDate = new Date();
+    var presentDay = new Date().getDay();
+    var presentHour = new Date().getHours();
+    var presentMin = new Date().getMinutes();
+
+    //if (presentHour < 18) {
+     //document.getElementById("demo").innerHTML = presentHour + " : " + presentMin;}
+
+    if (presentHour < 12) {
+      document.getElementById("demo").innerHTML = "굿모닝";
+    } 
+    else if (presentHour < 18) {
+      document.getElementById("demo").innerHTML = "굿에프터눈";
+    }
+    else {
+      document.getElementById("demo").innerHTML = "굿이브닝";
+    }
+  </script> -->
+     
+  <!--<h1 id="demo">good evening!</h1> 
+  <script>  
+      var presentDate = new Date();
+      var presentHour = new Date().getHours();
+      var presentMin = new Date().getMinutes();  
+      var presentDayNum = new Date().getDay();
+      var presentDay; 
+        
+   /* if문 사용 
+    if (presentDayNum == 0) {
+      document.getElementById("demo").innerHTML = "일요일";} 
+      else if (presentDayNum == 1) {
+      document.getElementById("demo").innerHTML = "월요일";}
+      else if (presentDayNum == 2) {
+      document.getElementById("demo").innerHTML = "화요일";}
+      else if (presentDayNum == 3) {
+      document.getElementById("demo").innerHTML = "수요일";}
+      else if (presentDayNum == 4) {
+      document.getElementById("demo").innerHTML = "목요일";}
+      else if (presentDayNum == 5) {
+      document.getElementById("demo").innerHTML = "금요일";}
+       else {
+      document.getElementById("demo").innerHTML = "토요일";} */
+
+    switch (presentDayNum) {
+      case 0 : presentDay ="일요일"; break;
+      case 1 : presentDay ="월요일"; break;
+      case 2 : presentDay ="화요일"; break;
+      case 3 : presentDay ="수요일"; break;
+      case 4 : presentDay ="목요일"; break;
+      case 5 : presentDay ="금요일"; break;
+      case 6 : presentDay ="토요일";
+
+    }
+    document.getElementById("demo").innerHTML = presentDay;
+
+  </script>-->
+
+  <h1>도시별 시간 구하기</h1> 
+
+  <p>Your city :</p><p id="your_city"></p>
+  <p>UTC (GMT) :</p><p id="utc"></p>
+
+  <p>Seoul (+9) :</p><p id="seoul"></p>
+
+  <p>Atlanta (-4) :</p><p id="atlanta"></p>
+  <p>Bogota (-5) :</p><p id="bogota"></p>
+  <p>Brooklyn (-4) :</p><p id="brooklyn"></p>
+
+  <p>Chicago (-5) :</p><p id="chicago"></p>
+  <p>DC (-4) :</p><p id="dc"></p>
+  <p>Detroit (-4) :</p><p id="detroit"></p>
+  <p>London (1) :</p><p id="london"></p>
+  <p>LA (-7) :</p><p id="la"></p>
+  <p>Medellin (-5) :</p><p id="medellin"></p>
+  <p>Oakland (-7) :</p><p id="oakland"></p>
+  <p>Singapore (+8) :</p><p id="singapore"></p>
+  <p>Toronto (-4) :</p><p id="toronto"></p>
+  <p>Tokyo (+9) :</p><p id="tokyo"></p>
+  
+
+  <script>  
+    var dateYourCity = new Date();  //브라우저 시간: 당신이 위치한 곳의 시간
+    var dateYourCityHour = dateYourCity.getHours();
+    var dateYourCityMin = dateYourCity.getMinutes();
+    document.getElementById("your_city").innerHTML = dateYourCityHour  + " : " + dateYourCityMin;
+
+    var timeOffsetMin = dateYourCity.getTimezoneOffset(); //브라우저 시간과 UTC시간의 차이(min단위로 표시됨)
+    var timeOffsetHour = timeOffsetMin / 60 ;
+
+    var utcHour = dateYourCityHour + timeOffsetHour;
+
+    var seoulHour = timeExchange(9);
+    var atlantaHour = timeExchange(-4);
+    var bogotaHour = timeExchange(-5);
+    var brooklynHour = timeExchange(-4);
+
+    var chicagoHour = timeExchange(-5);
+    var dcHour = timeExchange(-4);
+    var detroitHour = timeExchange(-4);
+    var londonHour = timeExchange(1);
+    var laHour = timeExchange(-7);
+    var medellinHour = timeExchange(-5);
+    var oaklandHour = timeExchange(-7);
+    var singaporeHour = timeExchange(8);
+    var torontoHour = timeExchange(-4);
+    var tokyoHour = timeExchange(9);
+
+    var seoulAmPm = amPm(seoulHour);
+    var atlantaAmPm = amPm(atlantaHour);
+    var bogotaAmPm = amPm(bogotaHour);
+    var brooklynAmPm = amPm(brooklynHour);
+    
+    var chicagoAmPm = amPm(chicagoHour);
+    var dcAmPm = amPm(dcHour);
+    var detroitAmPm = amPm(detroitHour);
+    var londonAmPm = amPm(londonHour);
+    var laAmPm = amPm(laHour);
+    var medellinAmPm = amPm(medellinHour);
+    var oaklandAmPm = amPm(oaklandHour);
+    var singaporeAmPm = amPm(singaporeHour);
+    var torontoAmPm = amPm(torontoHour);
+    var tokyoAmPm = amPm(tokyoHour);
+
+
+    //document.getElementById("utc").innerHTML = utcHour + " : " + dateYourCityMin;
+    document.getElementById("utc").
+    innerHTML = dateYourCity.getUTCHours()+ " : " + dateYourCityMin;
+
+    document.getElementById("seoul").
+    innerHTML = seoulHour + ":" + dateYourCityMin + " " + seoulAmPm;
+    document.getElementById("atlanta").
+    innerHTML = atlantaHour + ":" + dateYourCityMin + " " + atlantaAmPm;
+    document.getElementById("bogota").
+    innerHTML = bogotaHour + ":" + dateYourCityMin + " " + bogotaAmPm;
+    document.getElementById("brooklyn").
+    innerHTML = brooklynHour + ":" + dateYourCityMin + " " + brooklynAmPm;
+
+   /* document.getElementById("chicago").
+    innerHTML = chicagoHour + ":" + dateYourCityMin + " " + chicagoAmPm;
+    document.getElementById("dc").
+    innerHTML = dcHour + ":" + dateYourCityMin + " " + dcAmPm;
+    document.getElementById("detroit").
+    innerHTML = detroitHour + ":" + dateYourCityMin + " " + detroitAmPm;
+    document.getElementById("london").
+    innerHTML = londonHour + ":" + dateYourCityMin + " " + londonAmPm;
+    document.getElementById("la").
+    innerHTML = laHour + ":" + dateYourCityMin + " " + laAmPm;
+    document.getElementById("medellin").
+    innerHTML = medellinHour + ":" + dateYourCityMin + " " + medellinAmPm;
+    document.getElementById("oakland").
+    innerHTML = oaklandHour + ":" + dateYourCityMin + " " + oaklandAmPm;
+    document.getElementById("singapore").
+    innerHTML = singaporeHour + ":" + dateYourCityMin + " " + singaporeAmPm;
+    document.getElementById("toronto").
+    innerHTML = torontoHour + ":" + dateYourCityMin + " " + torontoAmPm;
+    document.getElementById("tokyo").
+    innerHTML = tokyoHour + ":" + dateYourCityMin + " " + tokyoAmPm;*/
+
+
+   function timeExchange(a) {
+     exchHour = utcHour + a;      //시간이 24보다 클 때는 0부터 시작 -24를 빼준다, 0보다 작을 때 24 더해준다.
+     if (exchHour > 24) { exchHour -= 24;} 
+     else if (exchHour < 0) { exchHour += 24;}
+     return exchHour;
+   }
+
+   function amPm(a) {
+     if (a >= 12) { b = "PM";} 
+     else { b = "AM";} 
+     return b;
+   }
+
+  </script>
+
+ 
+</body> 
+
+
+
+</html>

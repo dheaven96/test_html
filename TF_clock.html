@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Transform</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Huge Inc Website">
+    <meta name="keywords" content="Design, Agency, Web, UI, UX">
+    <meta name="author" content="Hevin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- css -->
+
+<!-- 구글 웹 폰트 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap">
+
+<style>
+
+@keyframes line_1 {
+     from { transform: rotate(0deg); }
+     to { transform: rotate(360deg); }
+ }
+ @keyframes line_2 {
+     from { transform: rotate(0deg); }
+     to { transform: rotate(360deg); }
+ }
+ @keyframes line_3 {
+     from { transform: rotate(0deg); }
+     to { transform: rotate(360deg); }
+ }
+
+
+.container { width:320px; height: 320px; background-color: wheat; position: relative;  border-radius: 50%; }
+
+.line_h {width:4px; height: 130px; background-color: red; position: absolute; top: 10%; left: 50%; transform-origin: 50% 100%; transition: transform 43200s; animation-name: line_1; animation-duration: 43200s; animation-timing-function: linear; animation-iteration-count: infinite; }
+
+.line_m {width:4px; height: 130px; background-color: blue; position: absolute; top: 10%; left: 50%; transform-origin: 50% 100%; transition: transform 3600s; animation-name: line_2; animation-duration: 3600s; animation-timing-function: linear;animation-iteration-count: infinite; }
+
+.line_s {width:4px; height: 130px; background-color: black; position: absolute; top: 10%; left: 50%; transform-origin: 50% 100%; transition: transform 60s; animation-name: line_3; animation-duration: 60s; animation-timing-function: linear; animation-iteration-count: infinite;}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+
+    <div class="line_h"></div>
+    <div class="line_m"></div>
+    <div class="line_s"></div>
+
+  </div>
+
+</body> 
+
+
+
+</html>

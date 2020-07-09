@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>JS-datatype</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="반복문">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!-- css -->
+  <style>
+
+ 
+  </style>
+
+</head>
+
+<body>
+  <p id="result" style="width: 600px; height: 100px;"></p>
+  <p id="result2"></p>
+  <p id="result3"></p>
+ 
+  <!-- <script>  문자열, 대소문자 구분, 못찾을시 -1반환, 음수이면 위치는 문자열 끝에서 계산
+     var x = "Bloom \'Your\' Possibility!"; // 따옴표 삽입
+     var x = "Bloom Your Possibi\blity!"; // 빈칸 삽입
+     var x = "Bloom\n Your\n Possibility!"; // 줄바꿈
+     var x = "Bloom Your Possibility!"; 
+
+     var pos = x.indexOf("o", 3); // 찾고자하는 문자열의 위치값 (0~), 어디서부터 찾을지 기준(시작위치)
+     var pos = x.lastIndexOf("o", 0); // 찾는 순서 방향이 반대로
+     var pos = x.search("Possibility"); //시작위치를 정할 수 없음
+
+     var resultStr= x.slice(pos,pos+"Possibility".length); //시작은 포함 종료는 불포함되어 잘라서 반환
+     var resultStr = x.substring(6, 12); // slice랑 같은데 음수색인은 불가능
+     var resultStr = x.substr(6, 12); // 위치, 글자수(생략시 all)
+
+     var resultTxt = x.replace("Your", "My");
+     var resultTxt = x.toUpperCase(); //대문자로
+     var resultTxt = x.split(";"); // 문자열 분할하여 배열로 저장
+
+     document.getElementById("result").innerHTML = pos;
+     document.getElementById("result2").innerHTML = resultStr;
+     document.getElementById("result3").innerHTML = resultTxt;
+
+     toString() 문자열로
+     toExponential() 지정한 소수점 이하부터는 지수표기법으로 변환 숫자를 반올림하고 문자열로 반환 (typeof 스트링)
+     toFixed() 소수점 자리수 지정 자르기 문자열로 반환 (typeof 스트링)
+     toPrecision() 지정된 길이로 쓴 숫자를 문자열로 반환 (typeof 스트링)
+
+     parseInt() 버림 후 정수로 반환(typeof 넘버)
+     parseFloat() 실수로 반환(typeof 넘버)
+
+     boolean() 부울린함수 T/F반환, 값이 있는 모든 것은 True
+  </script>-->
+
+  <script>
+     var x = 100 / "apple";
+     var y = 255;
+     var yy = new Number(255);
+     var z = "apple";
+
+    //while (y != -Infinity) {
+    //  y = y * - 99;
+    //}
+    var a = NaN;
+    console.log(Boolean(a));
+
+    var h = document.getElementById("result").style.width;
+    document.getElementById("result").innerHTML = parseInt(h);
+
+ </script>
+
+ 
+</body> 
+
+
+
+</html>

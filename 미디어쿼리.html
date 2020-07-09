@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <title>미디어쿼리</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Huge Inc Website">
+    <meta name="keywords" content="Design, Agency, Web, UI, UX">
+    <meta name="author" content="Hevin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/destyle.css"><!-- 브라우저 초기화 -->
+
+ <style> 
+ 
+   /*nav {width: 100%; height: 40px; background-color: #303030; color: white; }
+   a { width: 10%; color: white; font-size: 16px; line-height: 40px; display: block; float: left; text-align: center;} 
+   a:hover {background-color: cadetblue;}
+
+   @media screen and (max-width: 600px) {
+    a {float: none; width: 100%;} 
+    nav {height: auto; }
+   }
+
+   nav {width: 100%; height: 40px; background-color: #303030; color: white; display: flex; justify-content: flex-start;}
+   a { width: 10%; color: white; font-size: 16px; line-height: 40px; display: block; text-align: center; } 
+   a:hover {background-color: cadetblue;}
+
+   @media screen and (max-width: 600px) {
+    a { width: 100%; } 
+    nav { flex-wrap: wrap; height: auto; }
+   }
+
+   nav {width: 100%; height: 40px; background-color: #303030; color: white; display: flex; justify-content: flex-start;}
+   a { width: 10%; color: white; font-size: 16px; line-height: 40px; display: block; text-align: center; } 
+   a:hover {background-color: cadetblue;}
+
+   a:nth-child(1) { display: none; }
+
+   @media screen and (max-width: 600px) {
+    a { width: 15%; display: none; } 
+    a:nth-child(1), a:nth-child(2), a:nth-child(11) { display: block; } 
+    nav { justify-content: space-between;}
+   }*/
+
+   h1 { font-size: 48px; text-align: center; line-height: 60px; margin-top: 20px;}
+   p { font-size: 16px; text-align: center; line-height: 24px; }
+
+   .card_4column {width: 100%; height: auto;  display: flex; padding: 0 6px; box-sizing: border-box;}
+   .card_4column li { color: white; width: calc(50% - 12px); box-sizing: border-box; background-color: #a0a0a0;  position: relative; margin: 10px 10px;} 
+   .card_4column img { width: 100%; }
+   .card_4column h2 { font-size: 24px; text-align: center; line-height: 24px; margin: 0 20px 30px; position: absolute; bottom: 30px;}
+   .card_4column p { font-size: 16px; text-align: center; line-height: 24px; margin-left: 20px; position: absolute; bottom: 30px;}
+
+   @media screen and (max-width: 1024px) {
+    .card_4column { }
+    .card_4column li {  } 
+    h1 { font-size: 36px; }
+   }
+   @media screen and (max-width: 600px) {
+    .card_4column {flex-wrap: wrap; }
+    .card_4column li { width: calc(100% - 24px); } 
+    h1 { font-size: 28px; }
+    p { padding: 0 60px; }
+    span {display: block;}
+   }
+  
+
+ </style>
+
+</head>
+
+<body>
+
+  <h1>미디어쿼리를 이용한 반응형 웹</h1>
+  <p>화면의 넓이가 1024보다 클 경우에는 4단 컬럼, <span>일때는 2단 컬럼, 600보다 적을 때는 1단 컬럼 실습</span> </p>
+
+  <ul class="card_4column">
+    <li>
+        <img src="img/work/android-tile.jpg">
+        <h2>column1</h2>
+        <P>some text...</P>
+    </li>
+    <li>
+        <img src="img/work/LG_900Tile.jpg">
+        <h2>column2</h2>
+        <P>some text...</P>
+    </li>
+    <!--<li>
+        <img src="img/work/Google_Tile.jpg">
+        <h2>column3</h2>
+        <P>some text...</P>
+    </li>-->
+    
+  </ul>
+
+
+</body>
+</html>

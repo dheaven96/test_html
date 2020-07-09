@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>JS-cookie</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="반복문">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+  <style>
+ 
+ 
+  </style>
+
+</head>
+
+<body>
+  <p id="result"></p>
+
+ 
+  <script> //쿠키는 배열이 아니라 텍스트 문자열//
+      document.cookie = "username = Hevin";
+      document.cookie = "sex = male";
+      document.cookie = "age = 20";
+
+      var x = document.cookie;
+
+      document.getElementById("result").innerHTML = getCookie("username");
+
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(";");
+
+        for (i=0; i<ca.length; i++) {
+          var c = ca[i];
+            while (c.charAt(0) == " ") {
+               c=c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          return "";
+        }
+      }
+
+  </script>
+
+
+
+
+ 
+</body> 
+
+
+
+</html>

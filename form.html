@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Huge Inc Website">
+    <meta name="keywords" content="Design, Agency, Web, UI, UX">
+    <meta name="author" content="Hevin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  </head>
+
+
+  <body>
+
+    <form>
+
+      <fieldset><!--그룹과 관련된 데이터를 저장하는데 사용-->
+        <legend>사용자 개인 정보</legend>
+          <label for="user_name">이름</label>
+          <input type="text" id="user_name" name="u_name"><br>
+
+          <label for="user_sex">성별</label>
+          <input type="radio" id="user_sex" name="u_sex"><br><br>
+
+          <label for="car_select">당신이 선호하는 차 브랜드</label>
+          <select id="car_select" name="u_carbrand" multiple size="1"><!--드롭 다운 목록 정의-->
+            <optgroup label="버튼">외제차
+              <option value="Ferari">페라리</option>
+              <option value="Benz" selected>벤츠</option>
+            </optgroup>
+            <optgroup>국산차
+              <option value="Hyundai">현대</option>
+              <option value="Kia">기아</option>
+            </optgroup>
+          </select><br><br>
+      </fieldset>
+
+
+      <label for="user_browser">사용 브라우저</label>
+      <input id="user_browser" list="browsers" name="u_browser">
+          <datalist id="browsers">
+            <option value="IE">페라리</option>
+            <option value="Chrome" selected>벤츠</option>
+            <option value="Safari">BMW</option>
+            <option value="Opera">쉐보레</option>          
+          </datalist><br><br>
+
+
+
+       <label for="user_reivew">사용후기</label><br>
+       <textarea id="user_reivew" name="u_reivew" rows="10" cols="20" style="width: 200px; height: 200px;">사용후기를 작성해주세요.</textarea><br>
+  
+       <button type="button" onclick="alert('완료되었습니다!')">Click</button><br><br>
+
+
+       <input type="button"><br>
+       <input type="checkbox"><br>
+       <input type="color"><br>
+       <input type="date"><br>
+       <input type="datetime-local"><br>
+       <input type="email"><br>
+       <input type="file"><br>
+       <input type="hidden"><br>
+       <input type="month"><br>
+       <input type="number"><br>
+       <input type="password"><br>
+
+       <label for="male">남자</label>
+        <input type="radio" id="male" value="male" name="gender"><br>
+       <label for="female">여자</label>
+        <input type="radio" id="female" value="female" name="gender"><br>
+
+       <input type="range"><br>
+       <input type="reset"><br>
+       <label for="tel">전화번호</label>
+        <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+       <input type="text"><br>
+       <input type="time"><br>
+       <input type="url"><br>
+       <input type="week"><br>
+
+       <input type="submit">
+    </form> 
+
+
+    <!--<form action="/action_page.php" method="GET">//민감한 정보는  POST
+      <input type="text" name="fname" value="존"><br>
+      <input type="text" name="lname" value="김"><br>
+      
+      <textarea name="contents" cols="10" rows="10"></textarea>
+      <input type="submit" value="Submit">
+    </form>-->
+
+
+
+  </body> 
+
+</html>

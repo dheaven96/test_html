@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <title>JS-HTMLDOM</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="반복문">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+  <style>
+      #container {width:600px; height: 600px; position: relative; background-color: yellow;}
+      #title {width:200px; height: 50px; position: absolute; background-color: coral;}
+ 
+  </style>
+
+</head>
+
+<body>
+
+<!--
+  <h1 id="hello" class="title">Hello World!</h1>
+  <h2 id="demo_h2" class="title">VomAcademy</h2>
+  <p id="welcome" class="text">Welcome!</p>
+  <p id="demo_p" class="text"></p>
+  <img id="my_image" src="img/nature.jpg" width="300px">
+
+  <script>
+    //document.querySelectorAll("p.text")[1].innerHTML = "The Result is " + document.querySelectorAll("h2.title")[0].innerHTML;
+    //document.getElementById("demo_p").innerHTML = "The Test of Find ID " + document.getElementById("hello").innerHTML; 
+    //document.getElementById("demo_p").innerHTML = "The Result is " + document.title; 
+    document.write("<hr> The Result is ..");
+    document.getElementById("my_image").style.width = "600px";
+  </script>-->
+
+
+<!--
+ <div id="container">
+  <h1 id="title">Hello World!</h1>
+ </div>
+
+ <script>
+    var moveThing = document.getElementById("title");
+    var x = 0;
+    var y = 0;
+
+    var id = setInterval(myAnimate, 500);
+
+    function myAnimate() {
+        x = Math.random() * 600;
+        y = Math.random() * 600;
+       // x += 1;
+       // y += 1;
+        moveThing.style.left = x + "px";
+        moveThing.style.top = y + "px";
+
+        //if (x>600) {clearInterval(id);}
+    }
+  </script>-->
+
+<!-- DOM_node1 
+ <div id="div1">
+    <h1 id="demo">Hello</h1>
+    <div id="result">World</div>
+ </div>
+
+ <script>
+      //var myTitle = document.getElementById("demo").innerHTML; 
+    //var myTitle = document.getElementById("demo").firstChild.nodeValue;
+    //document.getElementById("result").innerHTML = myTitle;
+   
+    var para = document.createElement("p");
+    var node = document.createTextNode("This is New.");
+    para.appendChild(node);
+
+
+    //element.appendChild(para);
+
+    var element = document.getElementById("div1");
+
+    //element.insertBefore(para, document.getElementById("result"));
+    //document.getElementById("demo").remove();
+    element.replaceChild(para, document.getElementById("result"));
+    
+  </script> -->
+
+
+<!-- DOM_node2 --> 
+ <div id="div1">Text1
+    <h1 id="h1">Hello</h1>
+    <h2>JS Node 1</h2>
+    <P>노드간의 관계를 탐색 1</P>
+    <P>노드간의 관계를 탐색 11</P>
+    <P>노드간의 관계를 탐색 111</P>
+ </div>
+
+  <div id="div2">Text2
+    <h1 id="h2">World</h1>
+    <h2>JS Node 2</h2>
+    <P>노드간의 관계를 탐색 2</P>
+    <P>노드간의 관계를 탐색 22</P>
+    <P>노드간의 관계를 탐색 222</P>
+ </div>
+
+
+<script>
+
+  document.getElementById("h1").parentElement.style = "background-color:red;";
+  document.getElementById("h1").parentNode.style = "background-color:yellow;";
+  document.getElementById("h2").parentNode.style = "background-color:green;";
+  document.getElementById("h2").nextElementSibling.style = "color:red;";
+  document.getElementById("div2").children[2].previousElementSibling.style = "color:blue;";
+
+  //document.getElementById("div2").children[1].style = "color:red;";
+  ///document.getElementById("div2").children[0].style = "color:blue;";
+
+  console.log(document.getElementById("div2").childNodes[1].nodeName);
+  console.log(document.getElementById("h2").childNodes[0].nodeValue);
+
+  //document.getElementById("div2").children[2].remove();
+
+  console.log(document.querySelectorAll("p").length);
+  
+  
+</script>
+
+ 
+ 
+
+ 
+</body> 
+
+
+
+</html>

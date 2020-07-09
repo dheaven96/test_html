@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="canvas=비트맵px svg=백터">
+    <title>js_canvas</title>
+
+    <style>
+        div {width:500px; height:500px; margin: 0 auto;}
+        canvas {background-color:#eee; border: 1px solid black; margin: 0 auto;}
+    </style>
+
+</head>
+
+<body>
+    <div>
+      <canvas id="canvas_01" width="500px" height="500px"></canvas>
+    </div>
+    <!--<img id="img_01" src="img/photo_5.jpg" width="300px" height="300px">-->
+</body>
+
+<script>
+    var canvasA = document.getElementById("canvas_01");
+    var drawA = canvasA.getContext("2d"); 
+
+    /*선
+    //drawA.moveTo(0,0);
+    //drawA.lineTo(250,250);
+    //drawA.stroke();
+    */
+
+    var xx = 250;
+    var yy = 250;
+    var dx = Math.ceil(Math.random() * 9 + 1);
+    var dy = Math.ceil(Math.random() * 9 + 1);
+
+    
+    function draw() {
+      //사각형 그리기
+       //drawA.fillStyle = "#026FA1";
+       //drawA.clearRect(0,0,500,500);
+       //drawA.fillRect(xx,xx,100,100);
+    
+      //원 그리기
+      drawA.clearRect(0,0,500,500);
+      drawA.beginPath();
+      drawA.arc(xx,yy,20,Math.PI*2,0); //context.arc(x,y, 반지름, 시작각도, 종료각도);
+      drawA.lineWidth = 10;
+      drawA.strokeStyle = "#026FA1";
+      drawA.lineCap = "round";
+      drawA.stroke();
+    } 
+
+    //그리기 호출 함수
+    function aniStart() {      
+
+        xx += dx;
+        yy += dy;
+        var tt = setTimeout(aniStart,10);
+        draw();
+
+        if (xx > 480) { 
+           dx = -dx; 
+           //clearTimeout(tt);  //반복 멈춤
+           //return;    
+        }
+        else if (xx < 20) {
+            dx = -dx;
+        }
+
+
+        if (yy > 480) { 
+            dy = -dy; 
+        }
+        
+        else if (yy < 20) {
+            dy = -dy;
+        }
+        
+    }  
+
+    aniStart();
+
+    //for (i=100; i<=200; i++) {
+    //    drawA.fillRect(100,100,i,i);
+    //}
+
+
+
+    /*텍스트
+    //drawA.font = "30px Arial";
+    //drawA.fillStyle = "green";
+    //drawA.fillText("Hello Canvas", 100, 100);
+
+    //그라디언트
+    var grd = drawA.createRedialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    drawA.fillStyle = grd;
+    drawA.fillRect(10,10,10,80);
+
+
+    //이미지 표시
+    var img =  document.getElementById("img_01");
+    drawA.drawImage(img,10,10,150,180);
+    */
+
+</script>
+
+</html>

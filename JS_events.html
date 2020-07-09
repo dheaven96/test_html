@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>JS-events</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="이벤트">
+  <meta name="keywords" content="0,1,2,3,4,배열 ">
+  <meta name="author" content="Hevin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+<!-- css -->
+ <style>
+   #wrap {background-color: chartreuse; width: 200px; height: 200px; position: relative;}
+   #demo {background-color: rebeccapurple; width: 100px; height: 100px; position: absolute; left: 0px; top: 0px;}
+ 
+ </style>
+
+</head>
+
+<body>
+
+  <!-- <span>Enter your name: </span>
+   <input type="text" id="fname" onchange="inputCheck()">
+   <button id="button1">Click</button>-->
+
+   <div id="wrap">
+    <p id="demo">Hello</p> 
+   </div>
+
+  <script>      
+    //document.getElementById("button1").onclick = displayDate;
+    //document.getElementById("button1").onmouseover = displayDate;
+    //document.getElementById("button1").onmouseout = displayDateInit;
+
+   /* function displayDate() {     
+       document.getElementById("demo").innerHTML = Date();
+    }    
+    
+    function displayDateInit() {     
+       document.getElementById("demo").innerHTML = " ";
+    }   */
+
+
+    /* function inputCheck() {   
+        var x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }   */
+
+
+    function mouseDown() {     
+       document.getElementById("demo").style= "background-color:yellow; left:200px; top:200px;";
+    }  
+
+    function mouseUp() {     
+        document.getElementById("demo").style= "background-color:blue; left:200px; top:200px;";
+    }  
+
+    function mouseClick(a,b) {     
+        document.getElementById("demo").style.top= a+"px";
+        document.getElementById("demo").style.left= b+"px";
+    }  
+
+
+
+    function childIn() {     
+        alert("p demo!!!!!");
+    } 
+    function parentOut() {     
+        alert("div wrap!!!!!");
+    } 
+
+
+    var x = document.getElementById("demo");
+    var y = document.getElementById("wrap");
+
+    //x.addEventListener("click", function() {mouseClick(100,200);});//익명 함수
+    x.addEventListener("click", childIn);
+    y.addEventListener("click", parentOut);
+
+
+  </script>
+
+
+</body> 
+
+
+
+</html>

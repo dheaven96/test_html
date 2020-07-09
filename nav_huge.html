@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <title>Huge Inc.</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Huge Inc Website">
+    <meta name="keywords" content="Design, Agency, Web, UI, UX">
+    <meta name="author" content="Hevin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/destyle.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+    <!-- 구글 폰트 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap">
+
+ <style>
+/* Huge header */
+ #logo_h {width: 74px; height: 74px; background-color: white; color:#ea178c; font-family: HugeGotic-Bold; font-size: 32px; line-height: 32px; display: flex; justify-content: center; align-items: center; position: fixed; top: 50px; left: calc(50vw - 37px); z-index: 200;}
+ .logo_h:hover {}
+
+ header {background-color: #F4F4F4; width: 100vw; height: 440px; position: fixed; left: 0; top: 0; z-index: 100; visibility:hidden;}
+ nav {width: 100vw; height: 440px; display: flex; justify-content: center; align-items: center; position: relative; box-sizing: border-box; position: relative;}
+
+ .menu_wrap {width: 1050px; height: 90px; display: flex; justify-content: space-between;}
+ .menu_wrap li {width: 190px; height: 90px; display: flex; flex-direction: column; align-items:center;}
+ .menu_wrap li a {font-family: HugeGotic-Bold; font-size: 36px; color: black; line-height: 36px;}
+ .menu_wrap li a:hover {color: #ea178c;}
+ .menu_wrap p {font-family:Galaxie-Book; font-size: 14px; font-weight: 100; line-height: 28px; letter-spacing: -1px;} 
+ .menu_wrap li div {border-bottom: 1px solid black; width: 48px; height: 36px;}
+
+ .gnb_aside {width: 320px; height: 22px; display: flex; justify-content: center; position: absolute; top: 350px; left: calc(50vw - 160px);}
+ .gnb_aside p {font-family:Galaxie-Book; font-size: 14px; font-weight: 100; line-height: 22px; letter-spacing: -1px;}
+ .gnb_aside a {font-family:HugeGotic-Bold; font-size: 16px; line-height: 21px; margin-left: 6px; padding-top: 1px;}
+ .gnb_aside a:hover {color: #ea178c;}
+ .gnb_aside a span {color: #ea178c;}
+
+/* Home section */
+  h1 {font-family: HugeGotic-Bold; font-size: 300px; letter-spacing: 10px; color: white; color: black;}
+  section {width: 100vw; height: 100vh; display: flex; justify-content:center; align-items: center;}
+
+  #home_02 {background-image: url(img/hugeinc16.png); background-size: cover;}
+  #home_02 > h1 {color: white; font-size: 120px;}
+
+ </style>
+
+ <script>
+
+ var header_state = 0;
+
+      function LogoClick()  {
+        if (header_state == 0)  {
+          document.getElementById("home_header").style ="visibility:visible;";
+          header_state = 1;
+        } 
+        else {document.getElementById("home_header").style ="visibility:hidden;";
+            header_state = 0;
+        } 
+      }
+
+ </script>
+
+</head>
+
+
+<body>
+<!-- Home_logo 시작 -->
+<div id="logo_h" onclick="LogoClick()">H</div>
+
+<!-- 헤더 스타일 0 huge 스타일 -->
+<header id="home_header">
+    <nav class="gnb">
+        <ul class="menu_wrap">
+          <li>
+            <a href="hello.html" target="_blank">Hello.</a>
+            <p>Today at Huge.</p>
+            <div></div>
+          </li>
+          <li>
+            <a href="work.html">Work.</a>
+            <p>What we've made.</p>
+            <div></div>
+          </li>
+          <li>
+            <a href="about.html">About.</a>
+            <p>Who we are.</p>
+            <div></div>
+          </li>
+          <li>
+            <a href="careers.html">Careers.</a>
+            <p>Join the team.</p>
+            <div></div>
+          </li>
+          <li>
+            <a href="contact.html">Contact.</a>
+            <p>Get in touch.</p>
+            <div></div>
+          </li>
+        </ul>
+    
+        <div class="gnb_aside">
+          <p class="">Explore our thought leadership at</p>
+          <a href="magenta.html">MAGENTA<span>.</span></a>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <section id="home_hello">
+        <h1>Hello.</h1>
+    </section> 
+
+    <section id="home_02">
+        <h1>#Free ThePeriod.</h1>
+    </section> 
+</main>
+
+<footer>
+
+</footer>
+
+
+</body>
+</html>
